@@ -1,4 +1,4 @@
-module.exports = `-16
+const data = `-16
 +12
 -6
 -16
@@ -1015,3 +1015,5 @@ module.exports = `-16
 +19
 -14
 -113326`;
+
+module.exports = data.split('\n').map(each => parseInt(each));
