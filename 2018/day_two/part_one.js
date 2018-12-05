@@ -11,13 +11,7 @@ const mapDuplicates = string => string.split('').reduce((acc, letter) => {
 /**
  * If any of the letters occur in the string the number of times equal to {count}, return 1. Otherwise return 0.
  */
-const checkMapForCount = (map, count) => {
-    for (let key in map) {
-        if (map[key] === count) return 1;
-    }
-
-    return 0;
-};
+const checkMapForCount = (map, count) => Object.values(map).find(value => count === value) ? 1 : 0;
 
 const duplicateMaps = formattedData.map(mapDuplicates);
 
